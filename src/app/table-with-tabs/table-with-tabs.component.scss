@@ -1,0 +1,19 @@
+.claseBase{
+}
+
+.tabsWithHeaders{
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+
+.container{
+    max-width: 1240px;
+    margin: 0 auto;
+}
+
+.active{
+    color:red;
+
+}

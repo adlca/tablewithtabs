@@ -1,0 +1,45 @@
+<div class="container">
+<div class="tabsWithHeaders" #test>
+        <button *ngFor="let cabecera of tabsTitles" [ngClass]="cabecera.class" [id]="cabecera.name"
+              (click)="clickedSuperState(cabecera.name)" [class.active]="filterBy===cabecera.name.toUpperCase()"
+              [disabled]="cabecera.counter>0?false:true"
+              >
+           {{cabecera.counter? '('+cabecera.counter+')':''}} {{cabecera.name | titlecase}} 
+        </button>
+</div>
+<div class="table_model_1">
+    <div class="titles">
+        <div class="title_model_1">
+            Transporte N1
+        </div>
+        <div class="title_model_1">
+            Estado
+        </div>
+        <div class="title_model_1">
+            Placa
+        </div>
+        <div class="title_model_1">
+            Proveedor
+        </div>
+        <div class="title_model_1">
+            Fecha
+        </div>
+        <div class="title_model_1">
+            Monto total
+        </div>
+    </div>
+    <div class="content">
+        <div *ngFor="let item of dataShows" [ngClass]="test">
+            <div class="content_model_1">
+               {{item.numTransporte}}     
+            </div>
+            <div class="content_model_1">
+                {{item.status}}     
+             </div>
+             <div class="content_model_1">
+                {{item.placa}}     
+             </div>
+        </div>
+    </div>
+</div>
+</div>
